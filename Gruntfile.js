@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     config: {
-      sources: 'bpmn-app',
+      sources: 'src/bpmn-app',
       dist: 'dist'
     },
 
@@ -51,12 +51,12 @@ module.exports = function(grunt) {
           watch: true
         },
         files: {
-          '<%= config.dist %>/index.js': [ '<%= config.sources %>/**/*.js' ]
+          '<%= config.dist %>/bundle.js': [ '<%= config.sources %>/**/*.js' ]
         }
       },
       app: {
         files: {
-          '<%= config.dist %>/index.js': [ '<%= config.sources %>/**/*.js' ]
+          '<%= config.dist %>/bundle.js': [ '<%= config.sources %>/**/*.js' ]
         }
       }
     },
@@ -77,6 +77,16 @@ module.exports = function(grunt) {
             cwd: resolvePath('bpmn-js', 'assets'),
             src: ['**/*.*', '!**/*.js'],
             dest: '<%= config.dist %>/vendor'
+          }
+        ]
+      },
+      electron: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.sources %>/../electron/',
+            src: ['**/*.js'],
+            dest: '<%= config.dist %>/'
           }
         ]
       },
