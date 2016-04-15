@@ -13,4 +13,6 @@
 
 for development you can still use your normal browser. Just run a development server: `grunt auto-build`.
 
-
+## Distribution
+run `npm run publish-<platform>` to create a <platform> specific distribution.
+run `npm run publish-all` to create all possible platforms and architectures.
