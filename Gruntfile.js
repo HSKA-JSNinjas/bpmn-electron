@@ -90,6 +90,16 @@ module.exports = function(grunt) {
           }
         ]
       },
+      pack: {
+        files: [
+          {
+            expand: false,
+            cwd: '.',
+            src: ['package.json'],
+            dest: '<%= config.dist %>/'
+          }
+        ]
+      },
       app: {
         files: [
           {
