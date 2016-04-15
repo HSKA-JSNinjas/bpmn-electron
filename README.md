@@ -8,7 +8,7 @@
 2. `npm install`
 3. `grunt build`
 4. `npm start`
-5. 
+
 ## development
 
 for development you can still use your normal browser. Just run a development server: `grunt auto-build`.
