@@ -1,5 +1,5 @@
 # BPMN.IO desktop app (using electron)
-![alt text](docs/demo.png "Logo Title Text 1")
+![Demo Screenshot](docs/demo.png "Demo Screenshot")
 
 
 ## installation
