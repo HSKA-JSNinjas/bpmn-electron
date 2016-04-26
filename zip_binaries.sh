@@ -1,1 +1,1 @@
-for i in ./bin/*/; do zip -r "${i%/}.zip" "$i"; done
+for i in ./bin/*/; do zip -q -r "${i%/}.zip" "$i"; done
