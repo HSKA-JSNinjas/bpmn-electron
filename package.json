@@ -2,11 +2,12 @@
   "name": "bpmn-electron",
   "version": "1.0.0",
   "description": "",
+  "main": "main.js",
   "scripts": {
     "start": "electron ./dist",
-    "publish-linux": "electron-packager ./dist bpmn --platform=linux --arch=all --out ./bin", 
+    "publish-linux": "electron-packager ./dist bpmn --platform=linux --arch=all --out ./bin",
     "publish-windows": "electron-packager ./dist bpmn --platform=win32 --arch=all --out ./bin",
-    "publish-all": "electron-packager ./dist bpmn --platform=all --arch=all --out ./bin",      
+    "publish-all": "electron-packager ./dist bpmn --platform=all --arch=all --out ./bin",
     "publish-osx": "electron-packager ./dist bpmn --platform=darwin --arch=all --out ./bin"
   },
   "author": "",
@@ -15,7 +16,8 @@
     "bpmn-js": "^0.14.1",
     "bpmn-js-properties-panel": "^0.6.2",
     "electron-prebuilt": "^0.37.6",
-    "jquery": "^2.2.3"
+    "jquery": "^2.2.3",
+    "lodash": "^4.11.1"
   },
   "devDependencies": {
     "brfs": "^1.4.3",
