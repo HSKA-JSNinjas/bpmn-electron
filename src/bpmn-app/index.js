@@ -145,7 +145,7 @@ $(document).on('ready', function() {
     }
   }
 
-  var debounce = require('lodash/function/debounce');
+  var debounce = require('lodash/debounce');
 
   var exportArtifacts = debounce(function() {
 
