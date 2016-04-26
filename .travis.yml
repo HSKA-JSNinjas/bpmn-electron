@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+    - '5'
+before_install:
+    - npm install -g grunt
+script: 
+    - grunt build
+    - npm run publish-all
+before_deploy: ./zip_binaries.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: bWGqqceCM1/KJbmpxR/jFR4l8WDNprbu8PgJCshvOm+hBkteTVScbIuw0rDGF/mf1MI7KQ+jxWpn29Q8bLj/2itro89CBYWIjBSZb7zRk8GdJyIYOe8kZDTpLXX/M/GXFlnK0WjQzTtz086I9pXTO+PGpzQeUOBNgKLREA9ctmsXGhl09RdkLS5GnMXkf5HdkF30hzw8xw1FqQuxPvcQY6iGneGkxZmqOiRHlGO+U0DrNk1bxyzmmbfjE6YpMwlc9wsYkCERzcf9iLs50Ro2NEoUlKGFdhalVRJplBDzEHpzGpIrgPOpEykpcutvmCuDKYZkcMoZ+oQLYMewmFCjN6cHOtWjjltBSQl3lEx76x4go//uQMKVIKBmporrgWUp4sjTCpLImkw8To7V60q8QzbgPewJ+K1gk2eRZceHs9pXJbN+HJLg9Jk4WInrBBaAhdwBLDwxkgKKeSMONJcYdF2b+nzyy3yx0A1gncvJluCFkJ1QcViuzJpwRsNI9JijMUoqKX9/FaGnL+IWNzxiAaLEtgWzx+PSxbritkbl/2WAHg+AL9BZ/vpzEJAjKBua0XBtdH+sdTutSa0ZLSTRArqnJsToa8F+IuekNwXkCHvpQL2EHQXIz3D9g6hn9ungKK2QVWEaTx6THiWNvKM8SrXZDCLeeuc9ww+Ajr7N0nY=
+  file:
+  - bin/bpmn-linux-ia32.zip
+  - bin/bpmn-darwin-x64.zip
+  - bin/bpmn-win32-ia32.zip
+  - bin/bpmn-mas-x64.zip
+  - bin/bpmn-linux-x64.zip
+  - bin/bpmn-win32-x64.zip
+  skip_cleanup: true
+  on:
+    branch: release
