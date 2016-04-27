@@ -7,7 +7,11 @@ var $ = require('jquery'),
 
 var propertiesPanelModule = require('bpmn-js-properties-panel'),
     propertiesProviderModule = require('bpmn-js-properties-panel/lib/provider/camunda'),
-    camundaModdleDescriptor = require('camunda-bpmn-moddle/resources/camunda');
+    camundaModdleDescriptor = require('camunda-bpmn-moddle/resources/camunda'),
+    nyanPaletteModule = require('bpmn-js-nyan/lib/nyan/palette'),
+    nyanDrawModule = require('bpmn-js-nyan/lib/nyan/draw'),
+    colorPickerModule = require('bpmn-js-nyan/lib/color-picker'),
+    resizeAllModule = require('bpmn-js-nyan/lib/resize-all-rules');
 
 var container = $('#js-drop-zone');
 
@@ -20,7 +24,11 @@ var bpmnModeler = new BpmnModeler({
   },
   additionalModules: [
     propertiesPanelModule,
-    propertiesProviderModule
+    propertiesProviderModule,
+    nyanPaletteModule,
+    nyanDrawModule,
+    colorPickerModule,
+    resizeAllModule
   ],
   moddleExtensions: {
     camunda: camundaModdleDescriptor
