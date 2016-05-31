@@ -4,10 +4,13 @@
 
 ## installation
 
-1. clone this repository `git clone git@github.com:HSKA-JSNinjas/bpmn-electron.git`
-2. `npm install`
-3. `grunt build`
-4. `npm start`
+1. clone `https://github.com/HSKA-JSNinjas/bpmn-js-properties-panel` which is our own fork which contains code completion feature
+2. cd into the new directory and run `npm link`
+3. clone this repository `git clone git@github.com:HSKA-JSNinjas/bpmn-electron.git`
+4. cd into the directory and run `npm link bpmn-js-properties-panel`
+5. `npm install`
+6. `grunt build` or `grunt auto-build` (for development with a watcher)
+7. `npm start` (to start electron app)
 
 ## development
 
