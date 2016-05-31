@@ -1,0 +1,19 @@
+.codeCompletion {
+    position: fixed;
+    left: 1031px;
+    top: 276px;
+    width: 229px;
+    overflow-y: auto;
+    height: 90px;
+    z-index: 100;
+    background-color: white;
+}
+
+.codeCompletionLine {
+    height: 25px;
+    width: 100%;
+}
+
+.codeCompletionLine:hover {
+    background-color: deepskyblue;
+}
