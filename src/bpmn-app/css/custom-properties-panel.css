@@ -1,8 +1,6 @@
 .codeCompletion {
     position: fixed;
     left: 1031px;
-    top: 276px;
-    width: 229px;
     overflow-y: auto;
     height: 90px;
     z-index: 100;
